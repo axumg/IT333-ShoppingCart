@@ -1,4 +1,4 @@
-/*
+/**
 * James Staab
 * IT333
 * Shopping cart program
@@ -8,7 +8,7 @@ public class LineItem {
 
 
 	//we have set this to private so these items may not be edited directly and can only be done with getter and setter methods.
-	private String name;
+	public String name;
 	private int quantity;
 	private double pricePerUnit;
 

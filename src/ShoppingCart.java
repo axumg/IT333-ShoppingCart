@@ -1,4 +1,4 @@
-/*
+/**
 * James Staab
 * IT333
 * Shopping cart program
@@ -18,6 +18,7 @@ public class ShoppingCart{
 		int count = 0;
 		while (count < 10){
 			if (basket[count] == null){
+				System.out.println("adding a(n) "+ item.name + " it's cost is "+  item.getCost());
 				basket[count] = item;
 				break;
 			}
