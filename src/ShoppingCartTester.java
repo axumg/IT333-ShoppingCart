@@ -13,6 +13,17 @@ public class ShoppingCartTester {
         LineItem lime = new LineItem("Lime", 4, .10);
         LineItem coconut = new LineItem("Coconut", 2, 2.25);
 
+        System.out.println("First lets start by testing the Items by getting the cost of the lime, changing the quantity from 4 to 5, get getting the cost again to verify");
+        System.out.println(lime.getCost());
+        lime.setQuantity(5);
+        System.out.println(lime.getCost());
+        System.out.println("As you can see we are able to change the quantity of the items in the LineItem class.");
+
+
+        System.out.println();
+        System.out.println();
+
+        System.out.println("now lets test the various carts cases available");
         //testing singleItemCart
         singleItemCart.add(lime);
         System.out.println("Single Item Cart total cost: $" +singleItemCart.getTotalCost());
@@ -42,6 +53,8 @@ public class ShoppingCartTester {
         System.out.println("Overflow 10 Item cart cost: $" + overflowCart.getTotalCost());
 
         System.out.println("Empty Cart cost: $" + emptyCart.getTotalCost());
+
+
     }
 
 }
