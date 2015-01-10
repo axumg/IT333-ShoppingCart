@@ -8,7 +8,7 @@ public class LineItem {
 
 
 	//we have set this to private so these items may not be edited directly and can only be done with getter and setter methods.
-	public String name;
+	private String name;
 	private int quantity;
 	private double pricePerUnit;
 
@@ -26,6 +26,9 @@ public class LineItem {
 
 	public void setQuantity(int newQuantity){
 		this.quantity = newQuantity;
+	}
+	public String getName(){
+		return this.name;
 	}
 
 }

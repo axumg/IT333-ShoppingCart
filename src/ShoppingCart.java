@@ -3,17 +3,26 @@
 * IT333
 * Shopping cart program
 * */
-							//As you will notice below, I am a member of the same line opening curly brace master race.
+							
 public class ShoppingCart{
 
 	LineItem[] basket;
 
-	//Create a new shopping cart and initialize array
+	
+	/**
+	 * this is the default constructor that takes no parameters and initializes an empty array of line Items named basked
+	 * 
+	 * @return [description]
+	 */
 	public ShoppingCart(){
 		basket = new LineItem[0];
 
 	}
 
+	/**
+	 * This is the method to add LineItems to the array
+	 * @param item This is the LineItem to be added to the Shopping cart
+	 */
 	public void add(LineItem item){
 
 		if (basket.length > 9) {
@@ -26,7 +35,7 @@ public class ShoppingCart{
 				tempBasket[count] = thing;
 				count++;
 			}
-			System.out.println("adding a(n) " + item.name + " it's cost is " + item.getCost());
+			System.out.println("adding a(n) " + item.getName() + " it's cost is " + item.getCost());
 			tempBasket[count] = item;
 			basket = tempBasket;
 		}
@@ -34,6 +43,10 @@ public class ShoppingCart{
 
 	}
 
+	/**
+	 * This is a method that returns a double of the total cost
+	 * @return returns the total cost of the items in the basket
+	 */
 	public double getTotalCost(){
 		double total = 0;
 		for(LineItem item : basket){
